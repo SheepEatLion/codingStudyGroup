@@ -1,5 +1,7 @@
+package src.jinhye.car;
+
 public class Bmw implements Car {
-    String carName = "Bmw";
+    private String carName = "Bmw";
 
     public void startCar(){
 
