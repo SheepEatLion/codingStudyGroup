@@ -3,7 +3,7 @@ package game;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Main{
+public class Main {
 
     public static void main(String[] args) {
         ArrayList<Person> list = new ArrayList<>();
@@ -21,48 +21,40 @@ public class Main{
         person.setAct(in.next());
         BMW bmw = new BMW();
         KIA kia = new KIA();
-        if(person.getAct().equals("1")) {
+        if (person.getAct().equals("1")) {
             if (person.getCarPossession().equals("NO")) {
                 System.out.print("구매하시고 싶은 차를 선택하세요 1. BMW 2. KIA");
                 int want = in.nextInt();
                 if (want == 1) {
                     System.out.print("당신은 bmw를 구매하셨습니다!");
-                        else{
-                        System.out.print("당신은 kia를 구매하셨습니다!");
-                    }
+                } else {
+                    System.out.print("당신은 kia를 구매하셨습니다!");
                 }
             } else {
                 System.out.print("당신은 차를 구매하실 수 없습니다!");
             }
-        }
-        else if(person.getAct().equals("2")){
+        } else if (person.getAct().equals("2")) {
             System.out.print(person.getCarPossession());
-            }
-        else{
+        } else {
             if (person.getCarPossession().equals("NO")) {
                 System.out.print("가지고 있는 차가 없습니다.");
-                else if (person.getCarPossession().equals("BMW")) {
-                    System.out.print("1. 출발하기 2. 정지하기");
-                    int do = in.nextInt();
-                    if(do == 1){
-                        bmw.start();
-                    }
-                    else{
-                        bmw.stop();
-                    }
+            } else if (person.getCarPossession().equals("BMW")) {
+                System.out.print("1. 출발하기 2. 정지하기");
+                int go = in.nextInt();
+                if (go == 1) {
+                    bmw.start();
+                } else {
+                    bmw.stop();
+                }
+            } else {
+                System.out.print("1. 출발하기 2. 정지하기");
+                int go = in.nextInt();
+                if (go == 1) {
+                    kia.start();
+                } else {
+                    kia.stop();
                 }
             }
-                else{
-                    System.out.print("1. 출발하기 2. 정지하기");
-                    int do = in.nextInt();
-                    if(do == 1){
-                        kia.start();
-                    }
-                    else{
-                        kia.stop();
-                    }
-                }
         }
     }
-
 }
