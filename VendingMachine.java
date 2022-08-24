@@ -37,7 +37,7 @@ public class VendingMachine {
                 break;
             }
         }
-            while((N1>0) && (N2>0) && (N3>0) && (N4>0) && (N5>0)
+            while((N1>0) || (N2>0) || (N3>0) || (N4>0) || (N5>0)
         ){
                 Cash = sc.nextInt();
                 System.out.print(Cash + "만큼 있습니다.");
