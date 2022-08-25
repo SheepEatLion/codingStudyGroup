@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class VendingMachine {
     public static void main(String[] args) {
+        int coin;
         HashMap<String, Integer> map = new HashMap<>();
         map.put("초코송이", 1500);
         map.put("칸초", 1000);
@@ -15,7 +16,7 @@ public class VendingMachine {
         map.put("칙촉", 2000);
         map.put("몽쉘", 3000);
 
-        HashMap<String, Integer> map = new HashMap<>();
+        HashMap<String, Integer> stockmap = new HashMap<>();
         map.put("초코송이", 11);
         map.put("칸초", 3);
         map.put("홈런볼", 7);
@@ -26,9 +27,9 @@ public class VendingMachine {
             System.out.println("주문 하시겠습니까?\n" + "YES OR NO : ");
             Scanner sc = new Scanner(System.in);
             String answer;
-            answer = sc.nextInt();
+            answer = String.valueOf(sc.nextInt());
 
-            if(answer = "YES") {
+            if(answer == "YES") {
                 System.out.println("금액을 입력해주세요");
                 coin = sc.nextInt();
 
@@ -41,7 +42,7 @@ public class VendingMachine {
                 }
 
                 System.out.println("아이템을 골라주세요");
-                System.out..print("1.초코송이 (1500원)", "2.칸초 (1000원)", "3.홈런볼 (2500원)", "4.칙촉 (2000원)", "5.몽쉘 (3000원)" )
+                System.out.print("1.초코송이 (1500원) 2.칸초 (1000원) 3.홈런볼 (2500원) 4.칙촉 (2000원) 5.몽쉘 (3000원)" );
             }
 
         }
