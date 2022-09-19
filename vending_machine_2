@@ -1,0 +1,141 @@
+package pro_1;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		int i,j,k;
+		
+		System.out.println("++ 자판기 ++");
+		System.out.println("동전을 넣어주세요 >>");
+		int don = scanner.nextInt();
+		System.out.println("먹고싶은 음료를 선택해주세요. 1번 환타 2번 사이다 >>");
+        int buh = scanner.nextInt();
+        System.out.println("구매할 수량을 선택해주세요 >> ");
+        int ss = scanner .nextInt();
+		
+		Vendingmachine M = new Vendingmachine();	
+		User v_user = new User();
+        
+		
+		i = v_user.setInputMoney_1(don);
+		j = v_user.setInputMoney_2(buh);
+		k = v_user.setInputMoney_3(ss);
+		
+		M.gg(j,i,k);
+		
+		
+		
+		
+	}
+
+}
+package pro_1;
+
+public class Vendingmachine {
+	
+	int [] bever_1 = { 500, 5};
+    int [] bever_2 = { 600, 7};
+
+	void gg(int num, int mon, int the_num ) {
+		
+		if (num == 1) { 
+			
+        int num_1 = bever_1[0] * the_num;        
+        
+        if (num_1 <= mon) {
+            if(the_num <=  bever_1[1]) {
+               if (the_num <= bever_1[1]) {
+                  bever_1[1] = bever_1[1] - the_num ;
+                    int change = mon - num_1;
+                    System.out.println("음료가 나옵니다 >> 사이다 " +the_num+ " 개 나옵니다");
+                    System.out.println("잔돈이 나옵니다 >> " +change+ "원 ");
+                    System.out.println("남은 음료 잔고 >> 사이다 :" +bever_1[1]+ " >> 환타 :" +bever_2[1]);
+                    
+               }
+               else {
+                  System.out.println("수량이 부족하여 결제가 불가능 합니다");
+                  System.out.println("남은 음료 잔고 >> 사이다 :" +bever_1[1]+ " >> 환타 :" +bever_2[1]);
+               }
+            }   
+            
+         }
+        
+        else {
+            System.out.println("돈이 부족합니다.");
+            System.out.println("남은 음료 잔고 >> 사이다 :" +bever_1[1]+ " >> 환타 :" +bever_2[1]);
+            
+            }
+     }
+	    if (num == 2) { 
+
+            int num_1 = bever_2[0] * the_num;
+            
+            if (num_1 <= mon) {
+                if(the_num <=  bever_2[1]) {
+                   if (the_num <= bever_2[1]) {
+                      bever_2[1] = bever_2[1] - the_num ;
+                         int change = mon - num_1;
+                        System.out.println("음료가 나옵니다 >> 환타 " +the_num+ "개 나옵니다");
+                        System.out.println("잔돈이 나옵니다 >> " +change);
+                        System.out.println("남은 음료 잔고 >> 사이다 :" +bever_1[1]+ " >> 환타 :" +bever_2[1]);
+                        
+                   }
+                   else {
+                      System.out.println("수량이 부족하여 결제가 불가능 합니다");
+                      System.out.println("남은 음료 잔고 >> 사이다 :" +bever_1[1]+ " >> 환타 :" +bever_2[1]);
+                   }
+
+                }
+             
+             }
+            
+            else {
+                System.out.println("돈이 부족합니다.");
+                System.out.println("남은 음료 잔고 >> 사이다 :" +bever_1[1]+ " >> 환타 :" +bever_2[1]);   
+                }
+         }
+
+
+	    System.out.println("이용해주셔서 감사합니다.");
+
+	}
+
+
+}
+package pro_1;
+
+
+public class User {
+	
+	  int totalMoney = 0;
+	  int setInputMoney_1(int money) {
+	      totalMoney = money;
+	      System.out.println("총잔액 "+totalMoney);
+	      return totalMoney;
+	   }
+	  int cho = 0;
+	  int setInputMoney_2(int num) {
+	      cho = num;
+	      if (cho == 1) {
+	    	  System.out.println("선택한 음료 >> 환타 ");
+	      }
+	      if (cho == 2) {
+	    	  System.out.println("선택한 음료 >> 사이다 ");
+	      }
+	      return cho;
+	   }
+	  int thenum = 0;
+	  int setInputMoney_3(int the_num) {
+	      thenum = the_num;
+	      System.out.println("음료 수량 >> "+thenum);
+	      return thenum;
+	   }
+	
+}
+
+// 변수명, 오류 수정할 예정입니다.
