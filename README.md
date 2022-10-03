@@ -36,6 +36,17 @@
     * 프론트 할거라면 vue.js 또는 타임리프로 하고 디비는 h2 하다가 원하면 maria db 정도
     * 이후엔 클라우드 협업 (할 사람만)
 
+3. 커밋 규칙
+
+```
+* Feat : 새로운 기능의 추가 (Alda에서는 함수를 정의 또는 재정의 할 경우 Feat 사용)
+* Fix : 버그 수정
+* Docs: 문서 수정
+* STYLE : 스타일 관련 기능 (코드 포맷팅, 세미콜론 누락, 코드 기능 자체의 변경이 없는 경우)
+* REFACTOR : 코드 리팩토링
+* TEST : 테스트 코드, 리팩토링 코드 추가
+* CHORE : 빌드 업무 수정, 패키지 매니저 수정(ex. gitignore 수정 같은 경우), 그외 자잘한 수정
+```
 
 [ Java, Kotlin, Spring, SpringBoot, Spring Security, ThymeLeaf, HTML, CSS, Vue, Maria DB, AWS EC2, Docker, Kubernetes, Linux, ORM, JPA, Querydsl, MSA, Eureka, Spring Cloud Gateway, Spring Cloud Config, OpenSearch, sleuth, Zipkin, Kafka, RabbitMq, CI/CD, Jenkins ]
 ——————————————————————————— 기술 스택 미정
